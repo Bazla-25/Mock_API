@@ -5,7 +5,7 @@ const { URL } = require('url');
 
 const users = [
   {
-    id: '"93b99245-7c62-4ca7-b875-d7a15e5edbab"',
+    id: "93b99245-7c62-4ca7-b875-d7a15e5edbab",
     name: 'Salah',
     email: 'salah.baig@hazentech.com',
     department: 'Engineering',
@@ -55,26 +55,26 @@ const users = [
 ];
 
 const attendance = {
-  u101: [
+  "93b99245-7c62-4ca7-b875-d7a15e5edbab": [
     { date: '2025-10-01', status: 'present', checkIn: '09:05', checkOut: '17:45' },
     { date: '2025-10-02', status: 'present', checkIn: '09:12', checkOut: '17:38' },
     { date: '2025-10-03', status: 'remote', checkIn: '09:20', checkOut: '17:10' },
     { date: '2025-10-04', status: 'present', checkIn: '09:00', checkOut: '17:30' },
     { date: '2025-10-07', status: 'present', checkIn: '08:55', checkOut: '17:25' }
   ],
-  u102: [
+  "a36e6db9-b134-4b69-a6c8-abd59d0cc9bc": [
     { date: '2025-10-01', status: 'present', checkIn: '08:55', checkOut: '17:15' },
     { date: '2025-10-02', status: 'present', checkIn: '09:00', checkOut: '17:20' },
     { date: '2025-10-03', status: 'present', checkIn: '09:10', checkOut: '17:22' },
     { date: '2025-10-04', status: 'remote', checkIn: '09:05', checkOut: '17:00' }
   ],
-  u103: [
+  "91f941cc-5edd-4f08-a014-7a7139dbd214": [
     { date: '2025-10-01', status: 'present', checkIn: '09:10', checkOut: '17:35' },
     { date: '2025-10-02', status: 'leave', checkIn: null, checkOut: null },
     { date: '2025-10-03', status: 'present', checkIn: '09:18', checkOut: '17:32' },
     { date: '2025-10-04', status: 'present', checkIn: '09:05', checkOut: '17:18' }
   ],
-  u104: [
+  "453a3e6c-c2b6-4c17-9845-ef1533033a75": [
     { date: '2025-10-01', status: 'present', checkIn: '08:50', checkOut: '17:10' },
     { date: '2025-10-02', status: 'present', checkIn: '08:55', checkOut: '17:05' },
     { date: '2025-10-03', status: 'present', checkIn: '09:02', checkOut: '17:15' },
@@ -95,7 +95,7 @@ const attendance = {
 };
 
 const leaves = {
-  u101: [
+  "93b99245-7c62-4ca7-b875-d7a15e5edbab": [
     {
       id: 'L-2025-001',
       type: 'vacation',
@@ -113,7 +113,7 @@ const leaves = {
       reason: 'Utility work at home'
     }
   ],
-  u102: [
+  "a36e6db9-b134-4b69-a6c8-abd59d0cc9bc": [
     {
       id: 'L-2025-002',
       type: 'sick',
@@ -131,7 +131,7 @@ const leaves = {
       reason: 'Family event'
     }
   ],
-  u103: [
+  "91f941cc-5edd-4f08-a014-7a7139dbd214": [
     {
       id: 'L-2025-003',
       type: 'sick',
@@ -141,7 +141,7 @@ const leaves = {
       reason: 'Migraine'
     }
   ],
-  u104: [
+  "453a3e6c-c2b6-4c17-9845-ef1533033a75": [
     {
       id: 'L-2025-004',
       type: 'vacation',
