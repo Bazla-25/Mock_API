@@ -1,0 +1,8 @@
+{
+  "name": "mock-hr-api",
+  "version": "1.0.0",
+  "main": "mock_hr_api.js",
+  "scripts": {
+    "start": "node mock_hr_api.js"
+  }
+}
