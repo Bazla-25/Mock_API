@@ -53,11 +53,11 @@ const users = [
     location: 'Lahore'
   },
   {
-    id: '1382a751-8dbb-4faa-bf11-906c615146c4',
-    name: 'Farzand Ali',
-    email: 'farzand.ali@hazentech.com',
-    department: 'Scrum Master',
-    title: 'Scrum Master',
+    id: '0a036101-4cf4-4d13-a128-11f5f7b3c573',
+    name: 'Babar',
+    email: 'babar@hazentech.com',
+    department: 'Engineering',
+    title: 'Software Engineer',
     location: 'Lahore'
   }
 ];
@@ -251,7 +251,7 @@ const attendance = {
     { date: '2025-12-21', status: 'leave', checkIn: null, checkOut: null }
   ],
 
-  "farzand.ali@hazentech.com": [
+  'babar@hazentech.com': [
     { date: '2025-08-10', status: 'present', checkIn: '09:10', checkOut: '17:25' },
     { date: '2025-08-24', status: 'present', checkIn: '09:05', checkOut: '17:20' },
     { date: '2025-09-08', status: 'remote', checkIn: '09:18', checkOut: '17:05' },
@@ -405,7 +405,7 @@ const leaves = {
     }
   ],
 
-  "farzand.ali@hazentech.com": [
+  'babar@hazentech.com': [
     {
       id: 'L-2025-017',
       type: 'vacation',
