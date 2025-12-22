@@ -326,7 +326,7 @@ const server = http.createServer(async (req, res) => {
           });
         }
 
-        const { startDate, endDate, type = 'vacation', reason = 'Not specified' } = body;
+        const { startDate, endDate, type = 'vacation', reason = 'Not specified', email } = body;
         if (!startDate || !endDate) {
           return sendJson(res, 400, {
             error: 'startDate and endDate are required (YYYY-MM-DD)'
@@ -338,13 +338,15 @@ const server = http.createServer(async (req, res) => {
           type,
           startDate,
           endDate,
-          status: 'pending',
+          status: 'approved',
           reason,
           requestedOn: new Date().toISOString().slice(0, 10)
         };
 
-        if (!leaves[userKey]) leaves[userKey] = [];
-        leaves[userKey].push(newLeave);
+        console.log(`newLeave: ${JSON.stringify(newLeave)}, email: ${email}`);
+
+        if (!leaves[email]) leaves[email] = [];
+        leaves[email].push(newLeave);
         return sendJson(res, 201, { message: 'Leave request submitted', leave: newLeave });
       }
     }
