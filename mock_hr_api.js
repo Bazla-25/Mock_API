@@ -212,6 +212,7 @@ const parseBody = (req) =>
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const segments = url.pathname.split('/').filter(Boolean);
+  let cachedBody = null; // reuse parsed body when needed
 
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
@@ -220,7 +221,23 @@ const server = http.createServer(async (req, res) => {
 
   if (segments[0] === 'users') {
     const identifierFromQuery = url.searchParams.get('id') || url.searchParams.get('email');
-    const identifier = identifierFromQuery || (segments[1] ? decodeURIComponent(segments[1]) : null);
+    let identifier = identifierFromQuery || (segments[1] ? decodeURIComponent(segments[1]) : null);
+
+    // If POST /users/leaves without id/email in path/query, allow body to carry it.
+    if (!identifier && segments[1] === 'leaves' && req.method === 'POST') {
+      cachedBody = await parseBody(req);
+      if (!cachedBody || cachedBody._invalid) {
+        return sendJson(res, 400, {
+          error: 'Invalid JSON body; expected { startDate, endDate, type?, reason?, userId?|email? }'
+        });
+      }
+      identifier = cachedBody.userId || cachedBody.email || null;
+      if (!identifier) {
+        return sendJson(res, 400, {
+          error: 'userId or email is required (path, query, or body) to apply leave'
+        });
+      }
+    }
 
     // List all users when no identifier is provided.
     if (!identifier && segments.length === 1 && req.method === 'GET') {
@@ -254,7 +271,7 @@ const server = http.createServer(async (req, res) => {
         return sendJson(res, 200, { user, leaves: leaves[userKey] || [] });
       }
       if (req.method === 'POST') {
-        const body = await parseBody(req);
+        const body = cachedBody || await parseBody(req);
         if (!body || body._invalid) {
           return sendJson(res, 400, {
             error: 'Invalid JSON body; expected { startDate, endDate, type?, reason? }'
