@@ -50,7 +50,15 @@ const users = [
     email: 'ali.raza@hazentech.com',
     department: 'Platform',
     title: 'DevOps Engineer',
-    location: 'Islamabad'
+    location: 'Lahore'
+  },
+  {
+    id: '1382a751-8dbb-4faa-bf11-906c615146c4',
+    name: 'Farzand Ali',
+    email: 'farzand.ali@hazentech.com',
+    department: 'Scrum Master',
+    title: 'Scrum Master',
+    location: 'Lahore'
   }
 ];
 
@@ -66,10 +74,26 @@ const attendance = {
     { date: '2025-11-08', status: 'present', checkIn: '09:12', checkOut: '17:32' },
     { date: '2025-11-21', status: 'present', checkIn: '09:07', checkOut: '17:28' },
     { date: '2025-12-01', status: 'present', checkIn: '09:05', checkOut: '17:30' },
+    { date: '2025-12-02', status: 'present', checkIn: '09:04', checkOut: '17:24' },
+    { date: '2025-12-03', status: 'remote', checkIn: '09:20', checkOut: '17:05' },
+    { date: '2025-12-04', status: 'present', checkIn: '09:08', checkOut: '17:32' },
     { date: '2025-12-05', status: 'present', checkIn: '09:00', checkOut: '17:25' },
+    { date: '2025-12-06', status: 'present', checkIn: '09:06', checkOut: '17:18' },
+    { date: '2025-12-07', status: 'remote', checkIn: '09:25', checkOut: '17:15' },
+    { date: '2025-12-08', status: 'present', checkIn: '09:03', checkOut: '17:20' },
+    { date: '2025-12-09', status: 'present', checkIn: '09:10', checkOut: '17:27' },
+    { date: '2025-12-10', status: 'remote', checkIn: '09:18', checkOut: '17:12' },
+    { date: '2025-12-11', status: 'present', checkIn: '09:05', checkOut: '17:26' },
     { date: '2025-12-12', status: 'remote', checkIn: '09:20', checkOut: '17:15' },
+    { date: '2025-12-13', status: 'present', checkIn: '09:07', checkOut: '17:22' },
+    { date: '2025-12-14', status: 'present', checkIn: '09:06', checkOut: '17:21' },
+    { date: '2025-12-15', status: 'present', checkIn: '09:09', checkOut: '17:21' },
+    { date: '2025-12-16', status: 'remote', checkIn: '09:30', checkOut: '17:08' },
+    { date: '2025-12-17', status: 'present', checkIn: '09:05', checkOut: '17:30' },
     { date: '2025-12-18', status: 'present', checkIn: '09:08', checkOut: '17:35' },
-    { date: '2025-12-22', status: 'present', checkIn: '09:02', checkOut: '17:28' }
+    { date: '2025-12-19', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-20', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-21', status: 'leave', checkIn: null, checkOut: null }
   ],
 
   "wajhi@hazentech.com": [
@@ -82,10 +106,26 @@ const attendance = {
     { date: '2025-11-18', status: 'present', checkIn: '09:05', checkOut: '17:30' },
     { date: '2025-11-25', status: 'present', checkIn: '09:03', checkOut: '17:18' },
     { date: '2025-11-29', status: 'remote', checkIn: '09:15', checkOut: '17:05' },
+    { date: '2025-12-01', status: 'present', checkIn: '08:58', checkOut: '17:05' },
     { date: '2025-12-02', status: 'present', checkIn: '09:10', checkOut: '17:20' },
+    { date: '2025-12-03', status: 'present', checkIn: '09:04', checkOut: '17:12' },
+    { date: '2025-12-04', status: 'remote', checkIn: '09:15', checkOut: '17:00' },
+    { date: '2025-12-05', status: 'present', checkIn: '09:00', checkOut: '17:20' },
     { date: '2025-12-06', status: 'remote', checkIn: '09:12', checkOut: '17:05' },
+    { date: '2025-12-07', status: 'present', checkIn: '09:05', checkOut: '17:15' },
+    { date: '2025-12-08', status: 'present', checkIn: '09:06', checkOut: '17:16' },
+    { date: '2025-12-09', status: 'remote', checkIn: '09:12', checkOut: '17:04' },
+    { date: '2025-12-10', status: 'present', checkIn: '09:02', checkOut: '17:18' },
     { date: '2025-12-11', status: 'present', checkIn: '09:00', checkOut: '17:18' },
-    { date: '2025-12-15', status: 'present', checkIn: '09:07', checkOut: '17:26' },
+    { date: '2025-12-12', status: 'present', checkIn: '09:03', checkOut: '17:22' },
+    { date: '2025-12-13', status: 'remote', checkIn: '09:10', checkOut: '17:05' },
+    { date: '2025-12-14', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-15', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-16', status: 'present', checkIn: '09:08', checkOut: '17:24' },
+    { date: '2025-12-17', status: 'remote', checkIn: '09:15', checkOut: '17:05' },
+    { date: '2025-12-18', status: 'present', checkIn: '09:05', checkOut: '17:30' },
+    { date: '2025-12-19', status: 'present', checkIn: '09:04', checkOut: '17:19' },
+    { date: '2025-12-20', status: 'present', checkIn: '09:06', checkOut: '17:25' },
     { date: '2025-12-21', status: 'present', checkIn: '09:03', checkOut: '17:22' }
   ],
 
@@ -98,11 +138,27 @@ const attendance = {
     { date: '2025-11-11', status: 'present', checkIn: '09:05', checkOut: '17:20' },
     { date: '2025-11-19', status: 'present', checkIn: '09:02', checkOut: '17:18' },
     { date: '2025-11-27', status: 'remote', checkIn: '09:25', checkOut: '17:12' },
+    { date: '2025-12-01', status: 'present', checkIn: '09:05', checkOut: '17:18' },
+    { date: '2025-12-02', status: 'present', checkIn: '09:04', checkOut: '17:20' },
     { date: '2025-12-03', status: 'present', checkIn: '09:04', checkOut: '17:19' },
+    { date: '2025-12-04', status: 'present', checkIn: '09:06', checkOut: '17:25' },
+    { date: '2025-12-05', status: 'remote', checkIn: '09:20', checkOut: '17:10' },
+    { date: '2025-12-06', status: 'present', checkIn: '09:00', checkOut: '17:16' },
     { date: '2025-12-07', status: 'present', checkIn: '09:02', checkOut: '17:15' },
+    { date: '2025-12-08', status: 'remote', checkIn: '09:25', checkOut: '17:05' },
+    { date: '2025-12-09', status: 'present', checkIn: '09:08', checkOut: '17:22' },
+    { date: '2025-12-10', status: 'present', checkIn: '09:05', checkOut: '17:19' },
+    { date: '2025-12-11', status: 'remote', checkIn: '09:18', checkOut: '17:08' },
     { date: '2025-12-12', status: 'remote', checkIn: '09:25', checkOut: '17:05' },
+    { date: '2025-12-13', status: 'present', checkIn: '09:06', checkOut: '17:20' },
+    { date: '2025-12-14', status: 'present', checkIn: '09:10', checkOut: '17:24' },
+    { date: '2025-12-15', status: 'present', checkIn: '09:09', checkOut: '17:26' },
+    { date: '2025-12-16', status: 'present', checkIn: '09:07', checkOut: '17:23' },
     { date: '2025-12-17', status: 'present', checkIn: '09:00', checkOut: '17:25' },
-    { date: '2025-12-22', status: 'present', checkIn: '09:08', checkOut: '17:30' }
+    { date: '2025-12-18', status: 'remote', checkIn: '09:22', checkOut: '17:10' },
+    { date: '2025-12-19', status: 'present', checkIn: '09:04', checkOut: '17:18' },
+    { date: '2025-12-20', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-21', status: 'leave', checkIn: null, checkOut: null }
   ],
 
   "bazla.rashid@hazentech.com": [
@@ -110,13 +166,27 @@ const attendance = {
     { date: '2025-08-15', status: 'present', checkIn: '08:55', checkOut: '17:10' },
     { date: '2025-09-05', status: 'present', checkIn: '09:00', checkOut: '17:15' },
     { date: '2025-09-26', status: 'present', checkIn: '08:58', checkOut: '17:08' },
-    { date: '2025-12-01', status: 'leave', checkIn: null, checkOut: null }, // mapped for future leave consistency
-    { date: '2025-12-03', status: 'present', checkIn: '08:56', checkOut: '17:14' },
+    { date: '2025-12-01', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-02', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-03', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-04', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-05', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-06', status: 'present', checkIn: '08:53', checkOut: '17:06' },
+    { date: '2025-12-07', status: 'remote', checkIn: '09:05', checkOut: '17:00' },
     { date: '2025-12-08', status: 'present', checkIn: '08:52', checkOut: '17:12' },
+    { date: '2025-12-09', status: 'present', checkIn: '08:54', checkOut: '17:12' },
+    { date: '2025-12-10', status: 'present', checkIn: '08:56', checkOut: '17:15' },
+    { date: '2025-12-11', status: 'remote', checkIn: '09:10', checkOut: '17:05' },
     { date: '2025-12-12', status: 'present', checkIn: '08:55', checkOut: '17:18' },
-    { date: '2025-12-16', status: 'remote', checkIn: '09:05', checkOut: '17:05' },
+    { date: '2025-12-13', status: 'present', checkIn: '08:58', checkOut: '17:18' },
+    { date: '2025-12-14', status: 'present', checkIn: '09:00', checkOut: '17:20' },
+    { date: '2025-12-15', status: 'present', checkIn: '08:57', checkOut: '17:17' },
+    { date: '2025-12-16', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-17', status: 'remote', checkIn: '09:12', checkOut: '17:04' },
+    { date: '2025-12-18', status: 'present', checkIn: '08:55', checkOut: '17:16' },
+    { date: '2025-12-19', status: 'present', checkIn: '08:59', checkOut: '17:21' },
     { date: '2025-12-20', status: 'present', checkIn: '08:57', checkOut: '17:09' },
-    { date: '2025-12-22', status: 'present', checkIn: '08:50', checkOut: '17:04' }
+    { date: '2025-12-21', status: 'remote', checkIn: '09:08', checkOut: '17:03' }
   ],
 
   "ali.ahmad@hazentech.com": [
@@ -128,11 +198,27 @@ const attendance = {
     { date: '2025-11-11', status: 'leave', checkIn: null, checkOut: null },
     { date: '2025-11-19', status: 'present', checkIn: '09:18', checkOut: '17:24' },
     { date: '2025-11-28', status: 'remote', checkIn: '09:32', checkOut: '17:08' },
+    { date: '2025-12-01', status: 'present', checkIn: '09:20', checkOut: '17:30' },
+    { date: '2025-12-02', status: 'present', checkIn: '09:18', checkOut: '17:28' },
+    { date: '2025-12-03', status: 'remote', checkIn: '09:25', checkOut: '17:05' },
     { date: '2025-12-04', status: 'present', checkIn: '09:15', checkOut: '17:32' },
+    { date: '2025-12-05', status: 'present', checkIn: '09:16', checkOut: '17:24' },
+    { date: '2025-12-06', status: 'present', checkIn: '09:14', checkOut: '17:22' },
+    { date: '2025-12-07', status: 'remote', checkIn: '09:30', checkOut: '17:40' },
+    { date: '2025-12-08', status: 'present', checkIn: '09:12', checkOut: '17:20' },
     { date: '2025-12-09', status: 'present', checkIn: '09:18', checkOut: '17:25' },
+    { date: '2025-12-10', status: 'present', checkIn: '09:15', checkOut: '17:25' },
+    { date: '2025-12-11', status: 'remote', checkIn: '09:28', checkOut: '17:10' },
+    { date: '2025-12-12', status: 'present', checkIn: '09:18', checkOut: '17:22' },
     { date: '2025-12-13', status: 'remote', checkIn: '09:30', checkOut: '17:10' },
+    { date: '2025-12-14', status: 'present', checkIn: '09:16', checkOut: '17:24' },
+    { date: '2025-12-15', status: 'present', checkIn: '09:12', checkOut: '17:20' },
+    { date: '2025-12-16', status: 'present', checkIn: '09:10', checkOut: '17:18' },
+    { date: '2025-12-17', status: 'present', checkIn: '09:11', checkOut: '17:19' },
     { date: '2025-12-18', status: 'present', checkIn: '09:12', checkOut: '17:28' },
-    { date: '2025-12-22', status: 'present', checkIn: '09:05', checkOut: '17:20' }
+    { date: '2025-12-19', status: 'present', checkIn: '09:13', checkOut: '17:21' },
+    { date: '2025-12-20', status: 'present', checkIn: '09:14', checkOut: '17:25' },
+    { date: '2025-12-21', status: 'leave', checkIn: null, checkOut: null }
   ],
 
   "ali.raza@hazentech.com": [
@@ -142,11 +228,47 @@ const attendance = {
     { date: '2025-09-27', status: 'remote', checkIn: '09:05', checkOut: '17:05' },
     { date: '2025-10-11', status: 'present', checkIn: '08:50', checkOut: '17:20' },
     { date: '2025-11-22', status: 'present', checkIn: '09:00', checkOut: '17:30' },
+    { date: '2025-12-01', status: 'present', checkIn: '08:50', checkOut: '17:22' },
     { date: '2025-12-02', status: 'present', checkIn: '08:48', checkOut: '17:18' },
+    { date: '2025-12-03', status: 'present', checkIn: '08:52', checkOut: '17:18' },
+    { date: '2025-12-04', status: 'remote', checkIn: '09:05', checkOut: '17:00' },
+    { date: '2025-12-05', status: 'present', checkIn: '08:58', checkOut: '17:20' },
     { date: '2025-12-06', status: 'on-call', checkIn: '10:05', checkOut: '18:05' },
+    { date: '2025-12-07', status: 'present', checkIn: '08:54', checkOut: '17:16' },
+    { date: '2025-12-08', status: 'present', checkIn: '08:56', checkOut: '17:18' },
+    { date: '2025-12-09', status: 'remote', checkIn: '09:10', checkOut: '17:05' },
+    { date: '2025-12-10', status: 'present', checkIn: '08:59', checkOut: '17:21' },
     { date: '2025-12-11', status: 'present', checkIn: '08:55', checkOut: '17:22' },
+    { date: '2025-12-12', status: 'remote', checkIn: '09:12', checkOut: '17:04' },
+    { date: '2025-12-13', status: 'present', checkIn: '08:57', checkOut: '17:19' },
+    { date: '2025-12-14', status: 'present', checkIn: '08:55', checkOut: '17:18' },
+    { date: '2025-12-15', status: 'present', checkIn: '08:53', checkOut: '17:17' },
+    { date: '2025-12-16', status: 'present', checkIn: '08:51', checkOut: '17:16' },
     { date: '2025-12-17', status: 'remote', checkIn: '09:10', checkOut: '17:08' },
-    { date: '2025-12-22', status: 'present', checkIn: '08:52', checkOut: '17:25' }
+    { date: '2025-12-18', status: 'present', checkIn: '08:54', checkOut: '17:20' },
+    { date: '2025-12-19', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-20', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-21', status: 'leave', checkIn: null, checkOut: null }
+  ],
+
+  "farzand.ali@hazentech.com": [
+    { date: '2025-08-10', status: 'present', checkIn: '09:10', checkOut: '17:25' },
+    { date: '2025-08-24', status: 'present', checkIn: '09:05', checkOut: '17:20' },
+    { date: '2025-09-08', status: 'remote', checkIn: '09:18', checkOut: '17:05' },
+    { date: '2025-09-22', status: 'present', checkIn: '09:12', checkOut: '17:32' },
+    { date: '2025-10-09', status: 'present', checkIn: '09:00', checkOut: '17:22' },
+    { date: '2025-10-23', status: 'remote', checkIn: '09:25', checkOut: '17:10' },
+    { date: '2025-11-07', status: 'present', checkIn: '09:04', checkOut: '17:18' },
+    { date: '2025-11-21', status: 'present', checkIn: '09:06', checkOut: '17:26' },
+    { date: '2025-12-01', status: 'present', checkIn: '09:05', checkOut: '17:25' },
+    { date: '2025-12-05', status: 'present', checkIn: '09:07', checkOut: '17:24' },
+    { date: '2025-12-09', status: 'remote', checkIn: '09:22', checkOut: '17:12' },
+    { date: '2025-12-12', status: 'present', checkIn: '09:03', checkOut: '17:21' },
+    { date: '2025-12-15', status: 'present', checkIn: '09:01', checkOut: '17:18' },
+    { date: '2025-12-18', status: 'present', checkIn: '09:04', checkOut: '17:28' },
+    { date: '2025-12-20', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-21', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-12-22', status: 'leave', checkIn: null, checkOut: null }
   ]
 };
 
@@ -280,6 +402,17 @@ const leaves = {
       endDate: '2025-12-22',
       status: 'approved',
       reason: 'Family visit'
+    }
+  ],
+
+  "farzand.ali@hazentech.com": [
+    {
+      id: 'L-2025-017',
+      type: 'vacation',
+      startDate: '2025-12-20',
+      endDate: '2025-12-22',
+      status: 'approved',
+      reason: 'Family trip'
     }
   ]
 };
