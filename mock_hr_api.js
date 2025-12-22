@@ -231,6 +231,15 @@ const server = http.createServer(async (req, res) => {
     if (!user) return sendJson(res, 404, { error: 'User not found' });
     const userKey = user.email; // data keyed by email
 
+    // Support query-only lookups (e.g., /users?id=... or /users?email=...)
+    if (segments.length === 1 && req.method === 'GET') {
+      return sendJson(res, 200, {
+        user,
+        attendance: attendance[userKey] || [],
+        leaves: leaves[userKey] || []
+      });
+    }
+
     // Support attendance via query param (e.g., /users/attendance?id=...).
     if (segments[1] === 'attendance' && req.method === 'GET') {
       const month = url.searchParams.get('month'); // YYYY-MM
