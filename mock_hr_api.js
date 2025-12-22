@@ -219,14 +219,58 @@ const server = http.createServer(async (req, res) => {
   if (req.method === 'OPTIONS') return sendJson(res, 204, {});
 
   if (segments[0] === 'users') {
-    if (segments.length === 1 && req.method === 'GET') {
+    const identifierFromQuery = url.searchParams.get('id') || url.searchParams.get('email');
+    const identifier = identifierFromQuery || (segments[1] ? decodeURIComponent(segments[1]) : null);
+
+    // List all users when no identifier is provided.
+    if (!identifier && segments.length === 1 && req.method === 'GET') {
       return sendJson(res, 200, { users });
     }
 
-    const identifier = decodeURIComponent(segments[1]);
-    const user = users.find((u) => u.id === identifier || u.email === identifier);
+    const user = users.find((u) => (identifier && (u.id === identifier || u.email === identifier)));
     if (!user) return sendJson(res, 404, { error: 'User not found' });
     const userKey = user.email; // data keyed by email
+
+    // Support attendance via query param (e.g., /users/attendance?id=...).
+    if (segments[1] === 'attendance' && req.method === 'GET') {
+      const month = url.searchParams.get('month'); // YYYY-MM
+      let records = attendance[userKey] || [];
+      if (month) records = records.filter((r) => r.date.startsWith(month));
+      return sendJson(res, 200, { user, attendance: records });
+    }
+
+    // Support leaves via query param (e.g., /users/leaves?id=...).
+    if (segments[1] === 'leaves') {
+      if (req.method === 'GET') {
+        return sendJson(res, 200, { user, leaves: leaves[userKey] || [] });
+      }
+      if (req.method === 'POST') {
+        const body = await parseBody(req);
+        if (!body || body._invalid) {
+          return sendJson(res, 400, {
+            error: 'Invalid JSON body; expected { startDate, endDate, type?, reason? }'
+          });
+        }
+        const { startDate, endDate, type = 'vacation', reason = 'Not specified' } = body;
+        if (!startDate || !endDate) {
+          return sendJson(res, 400, {
+            error: 'startDate and endDate are required (YYYY-MM-DD)'
+          });
+        }
+        const newLeave = {
+          id: `L-${Date.now().toString(36).toUpperCase()}`,
+          type,
+          startDate,
+          endDate,
+          status: 'pending',
+          reason,
+          requestedOn: new Date().toISOString().slice(0, 10)
+        };
+        if (!leaves[userKey]) leaves[userKey] = [];
+        leaves[userKey].push(newLeave);
+        return sendJson(res, 201, { message: 'Leave request submitted', leave: newLeave });
+      }
+    }
 
     if (segments.length === 2 && req.method === 'GET') {
       return sendJson(res, 200, {
