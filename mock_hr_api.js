@@ -55,7 +55,7 @@ const users = [
 ];
 
 const attendance = {
-  "93b99245-7c62-4ca7-b875-d7a15e5edbab": [
+  "salah.baig@hazentech.com": [
     { date: '2025-08-05', status: 'present', checkIn: '09:05', checkOut: '17:40' },
     { date: '2025-08-18', status: 'remote', checkIn: '09:15', checkOut: '17:20' },
     { date: '2025-09-03', status: 'present', checkIn: '09:00', checkOut: '17:35' },
@@ -65,7 +65,7 @@ const attendance = {
     { date: '2025-11-02', status: 'remote', checkIn: '09:25', checkOut: '17:10' }
   ],
 
-  "a36e6db9-b134-4b69-a6c8-abd59d0cc9bc": [
+  "wajhi@hazentech.com": [
     { date: '2025-08-06', status: 'present', checkIn: '08:55', checkOut: '17:10' },
     { date: '2025-08-22', status: 'present', checkIn: '09:05', checkOut: '17:25' },
     { date: '2025-09-10', status: 'present', checkIn: '09:00', checkOut: '17:20' },
@@ -75,7 +75,7 @@ const attendance = {
     { date: '2025-11-18', status: 'present', checkIn: '09:05', checkOut: '17:30' }
   ],
 
-  "91f941cc-5edd-4f08-a014-7a7139dbd214": [
+  "m.talha@hazentech.com": [
     { date: '2025-08-04', status: 'present', checkIn: '09:10', checkOut: '17:30' },
     { date: '2025-08-20', status: 'present', checkIn: '09:00', checkOut: '17:25' },
     { date: '2025-09-02', status: 'leave', checkIn: null, checkOut: null },
@@ -84,7 +84,7 @@ const attendance = {
     { date: '2025-11-11', status: 'present', checkIn: '09:05', checkOut: '17:20' }
   ],
 
-  "453a3e6c-c2b6-4c17-9845-ef1533033a75": [
+  "bazla.rashid@hazentech.com": [
     { date: '2025-08-01', status: 'present', checkIn: '08:50', checkOut: '17:05' },
     { date: '2025-08-15', status: 'present', checkIn: '08:55', checkOut: '17:10' },
     { date: '2025-09-05', status: 'present', checkIn: '09:00', checkOut: '17:15' },
@@ -92,7 +92,7 @@ const attendance = {
     { date: '2025-12-01', status: 'leave', checkIn: null, checkOut: null } // mapped for future leave consistency
   ],
 
-  "23d03d81-03b3-4efe-9376-f9535b9cb142": [
+  "ali.ahmad@hazentech.com": [
     { date: '2025-08-07', status: 'remote', checkIn: '09:30', checkOut: '17:40' },
     { date: '2025-08-21', status: 'present', checkIn: '09:20', checkOut: '17:25' },
     { date: '2025-09-09', status: 'present', checkIn: '09:10', checkOut: '17:30' },
@@ -101,7 +101,7 @@ const attendance = {
     { date: '2025-11-11', status: 'leave', checkIn: null, checkOut: null }
   ],
 
-  u106: [
+  "ali.raza@hazentech.com": [
     { date: '2025-08-03', status: 'present', checkIn: '08:45', checkOut: '17:30' },
     { date: '2025-08-17', status: 'on-call', checkIn: '10:00', checkOut: '18:00' },
     { date: '2025-09-06', status: 'present', checkIn: '08:55', checkOut: '17:15' },
@@ -113,7 +113,7 @@ const attendance = {
 
 
 const leaves = {
-  "93b99245-7c62-4ca7-b875-d7a15e5edbab": [
+  "salah.baig@hazentech.com": [
     {
       id: 'L-2025-001',
       type: 'vacation',
@@ -132,7 +132,7 @@ const leaves = {
     }
   ],
 
-  "a36e6db9-b134-4b69-a6c8-abd59d0cc9bc": [
+  "wajhi@hazentech.com": [
     {
       id: 'L-2025-002',
       type: 'sick',
@@ -143,7 +143,7 @@ const leaves = {
     }
   ],
 
-  "91f941cc-5edd-4f08-a014-7a7139dbd214": [
+  "m.talha@hazentech.com": [
     {
       id: 'L-2025-003',
       type: 'sick',
@@ -162,7 +162,7 @@ const leaves = {
     }
   ],
 
-  "453a3e6c-c2b6-4c17-9845-ef1533033a75": [
+  "bazla.rashid@hazentech.com": [
     {
       id: 'L-2025-004',
       type: 'vacation',
@@ -173,7 +173,7 @@ const leaves = {
     }
   ],
 
-  "23d03d81-03b3-4efe-9376-f9535b9cb142": [
+  "ali.ahmad@hazentech.com": [
     {
       id: 'L-2025-005',
       type: 'training',
@@ -184,7 +184,7 @@ const leaves = {
     }
   ],
 
-  u106: []
+  "ali.raza@hazentech.com": []
 };
 
 const sendJson = (res, statusCode, payload) => {
@@ -223,28 +223,29 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { users });
     }
 
-    const userId = segments[1];
-    const user = users.find((u) => u.id === userId);
+    const identifier = decodeURIComponent(segments[1]);
+    const user = users.find((u) => u.id === identifier || u.email === identifier);
     if (!user) return sendJson(res, 404, { error: 'User not found' });
+    const userKey = user.email; // data keyed by email
 
     if (segments.length === 2 && req.method === 'GET') {
       return sendJson(res, 200, {
         user,
-        attendance: attendance[userId] || [],
-        leaves: leaves[userId] || []
+        attendance: attendance[userKey] || [],
+        leaves: leaves[userKey] || []
       });
     }
 
     if (segments[2] === 'attendance' && req.method === 'GET') {
       const month = url.searchParams.get('month'); // YYYY-MM
-      let records = attendance[userId] || [];
+      let records = attendance[userKey] || [];
       if (month) records = records.filter((r) => r.date.startsWith(month));
       return sendJson(res, 200, { user, attendance: records });
     }
 
     if (segments[2] === 'leaves') {
       if (req.method === 'GET') {
-        return sendJson(res, 200, { user, leaves: leaves[userId] || [] });
+        return sendJson(res, 200, { user, leaves: leaves[userKey] || [] });
       }
 
       if (req.method === 'POST') {
@@ -272,8 +273,8 @@ const server = http.createServer(async (req, res) => {
           requestedOn: new Date().toISOString().slice(0, 10)
         };
 
-        if (!leaves[userId]) leaves[userId] = [];
-        leaves[userId].push(newLeave);
+        if (!leaves[userKey]) leaves[userKey] = [];
+        leaves[userKey].push(newLeave);
         return sendJson(res, 201, { message: 'Leave request submitted', leave: newLeave });
       }
     }
