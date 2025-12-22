@@ -175,7 +175,7 @@ const leaves = {
       type: 'vacation',
       startDate: '2025-12-19',
       endDate: '2025-12-22',
-      status: 'pending',
+      status: 'approved',
       reason: 'Year-end break'
     }
   ],
@@ -194,7 +194,7 @@ const leaves = {
       type: 'casual',
       startDate: '2025-12-14',
       endDate: '2025-12-15',
-      status: 'pending',
+      status: 'approved',
       reason: 'Family event'
     }
   ],
@@ -221,7 +221,7 @@ const leaves = {
       type: 'vacation',
       startDate: '2025-12-20',
       endDate: '2025-12-22',
-      status: 'pending',
+      status: 'approved',
       reason: 'Travel'
     }
   ],
@@ -240,7 +240,7 @@ const leaves = {
       type: 'sick',
       startDate: '2025-12-16',
       endDate: '2025-12-16',
-      status: 'pending',
+      status: 'approved',
       reason: 'Flu'
     }
   ],
@@ -259,7 +259,7 @@ const leaves = {
       type: 'vacation',
       startDate: '2025-12-21',
       endDate: '2025-12-22',
-      status: 'pending',
+      status: 'approved',
       reason: 'Short trip'
     }
   ],
@@ -278,7 +278,7 @@ const leaves = {
       type: 'vacation',
       startDate: '2025-12-19',
       endDate: '2025-12-22',
-      status: 'pending',
+      status: 'approved',
       reason: 'Family visit'
     }
   ]
