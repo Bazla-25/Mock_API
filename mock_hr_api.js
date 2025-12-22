@@ -62,7 +62,14 @@ const attendance = {
     { date: '2025-09-19', status: 'present', checkIn: '09:10', checkOut: '17:45' },
     { date: '2025-10-14', status: 'leave', checkIn: null, checkOut: null },
     { date: '2025-10-15', status: 'leave', checkIn: null, checkOut: null },
-    { date: '2025-11-02', status: 'remote', checkIn: '09:25', checkOut: '17:10' }
+    { date: '2025-11-02', status: 'remote', checkIn: '09:25', checkOut: '17:10' },
+    { date: '2025-11-08', status: 'present', checkIn: '09:12', checkOut: '17:32' },
+    { date: '2025-11-21', status: 'present', checkIn: '09:07', checkOut: '17:28' },
+    { date: '2025-12-01', status: 'present', checkIn: '09:05', checkOut: '17:30' },
+    { date: '2025-12-05', status: 'present', checkIn: '09:00', checkOut: '17:25' },
+    { date: '2025-12-12', status: 'remote', checkIn: '09:20', checkOut: '17:15' },
+    { date: '2025-12-18', status: 'present', checkIn: '09:08', checkOut: '17:35' },
+    { date: '2025-12-22', status: 'present', checkIn: '09:02', checkOut: '17:28' }
   ],
 
   "wajhi@hazentech.com": [
@@ -72,7 +79,14 @@ const attendance = {
     { date: '2025-09-24', status: 'remote', checkIn: '09:10', checkOut: '17:00' },
     { date: '2025-10-05', status: 'leave', checkIn: null, checkOut: null },
     { date: '2025-10-06', status: 'leave', checkIn: null, checkOut: null },
-    { date: '2025-11-18', status: 'present', checkIn: '09:05', checkOut: '17:30' }
+    { date: '2025-11-18', status: 'present', checkIn: '09:05', checkOut: '17:30' },
+    { date: '2025-11-25', status: 'present', checkIn: '09:03', checkOut: '17:18' },
+    { date: '2025-11-29', status: 'remote', checkIn: '09:15', checkOut: '17:05' },
+    { date: '2025-12-02', status: 'present', checkIn: '09:10', checkOut: '17:20' },
+    { date: '2025-12-06', status: 'remote', checkIn: '09:12', checkOut: '17:05' },
+    { date: '2025-12-11', status: 'present', checkIn: '09:00', checkOut: '17:18' },
+    { date: '2025-12-15', status: 'present', checkIn: '09:07', checkOut: '17:26' },
+    { date: '2025-12-21', status: 'present', checkIn: '09:03', checkOut: '17:22' }
   ],
 
   "m.talha@hazentech.com": [
@@ -81,7 +95,14 @@ const attendance = {
     { date: '2025-09-02', status: 'leave', checkIn: null, checkOut: null },
     { date: '2025-09-16', status: 'present', checkIn: '09:15', checkOut: '17:35' },
     { date: '2025-10-02', status: 'leave', checkIn: null, checkOut: null },
-    { date: '2025-11-11', status: 'present', checkIn: '09:05', checkOut: '17:20' }
+    { date: '2025-11-11', status: 'present', checkIn: '09:05', checkOut: '17:20' },
+    { date: '2025-11-19', status: 'present', checkIn: '09:02', checkOut: '17:18' },
+    { date: '2025-11-27', status: 'remote', checkIn: '09:25', checkOut: '17:12' },
+    { date: '2025-12-03', status: 'present', checkIn: '09:04', checkOut: '17:19' },
+    { date: '2025-12-07', status: 'present', checkIn: '09:02', checkOut: '17:15' },
+    { date: '2025-12-12', status: 'remote', checkIn: '09:25', checkOut: '17:05' },
+    { date: '2025-12-17', status: 'present', checkIn: '09:00', checkOut: '17:25' },
+    { date: '2025-12-22', status: 'present', checkIn: '09:08', checkOut: '17:30' }
   ],
 
   "bazla.rashid@hazentech.com": [
@@ -89,7 +110,13 @@ const attendance = {
     { date: '2025-08-15', status: 'present', checkIn: '08:55', checkOut: '17:10' },
     { date: '2025-09-05', status: 'present', checkIn: '09:00', checkOut: '17:15' },
     { date: '2025-09-26', status: 'present', checkIn: '08:58', checkOut: '17:08' },
-    { date: '2025-12-01', status: 'leave', checkIn: null, checkOut: null } // mapped for future leave consistency
+    { date: '2025-12-01', status: 'leave', checkIn: null, checkOut: null }, // mapped for future leave consistency
+    { date: '2025-12-03', status: 'present', checkIn: '08:56', checkOut: '17:14' },
+    { date: '2025-12-08', status: 'present', checkIn: '08:52', checkOut: '17:12' },
+    { date: '2025-12-12', status: 'present', checkIn: '08:55', checkOut: '17:18' },
+    { date: '2025-12-16', status: 'remote', checkIn: '09:05', checkOut: '17:05' },
+    { date: '2025-12-20', status: 'present', checkIn: '08:57', checkOut: '17:09' },
+    { date: '2025-12-22', status: 'present', checkIn: '08:50', checkOut: '17:04' }
   ],
 
   "ali.ahmad@hazentech.com": [
@@ -98,7 +125,14 @@ const attendance = {
     { date: '2025-09-09', status: 'present', checkIn: '09:10', checkOut: '17:30' },
     { date: '2025-09-23', status: 'present', checkIn: '09:05', checkOut: '17:20' },
     { date: '2025-11-10', status: 'leave', checkIn: null, checkOut: null },
-    { date: '2025-11-11', status: 'leave', checkIn: null, checkOut: null }
+    { date: '2025-11-11', status: 'leave', checkIn: null, checkOut: null },
+    { date: '2025-11-19', status: 'present', checkIn: '09:18', checkOut: '17:24' },
+    { date: '2025-11-28', status: 'remote', checkIn: '09:32', checkOut: '17:08' },
+    { date: '2025-12-04', status: 'present', checkIn: '09:15', checkOut: '17:32' },
+    { date: '2025-12-09', status: 'present', checkIn: '09:18', checkOut: '17:25' },
+    { date: '2025-12-13', status: 'remote', checkIn: '09:30', checkOut: '17:10' },
+    { date: '2025-12-18', status: 'present', checkIn: '09:12', checkOut: '17:28' },
+    { date: '2025-12-22', status: 'present', checkIn: '09:05', checkOut: '17:20' }
   ],
 
   "ali.raza@hazentech.com": [
@@ -107,7 +141,12 @@ const attendance = {
     { date: '2025-09-06', status: 'present', checkIn: '08:55', checkOut: '17:15' },
     { date: '2025-09-27', status: 'remote', checkIn: '09:05', checkOut: '17:05' },
     { date: '2025-10-11', status: 'present', checkIn: '08:50', checkOut: '17:20' },
-    { date: '2025-11-22', status: 'present', checkIn: '09:00', checkOut: '17:30' }
+    { date: '2025-11-22', status: 'present', checkIn: '09:00', checkOut: '17:30' },
+    { date: '2025-12-02', status: 'present', checkIn: '08:48', checkOut: '17:18' },
+    { date: '2025-12-06', status: 'on-call', checkIn: '10:05', checkOut: '18:05' },
+    { date: '2025-12-11', status: 'present', checkIn: '08:55', checkOut: '17:22' },
+    { date: '2025-12-17', status: 'remote', checkIn: '09:10', checkOut: '17:08' },
+    { date: '2025-12-22', status: 'present', checkIn: '08:52', checkOut: '17:25' }
   ]
 };
 
@@ -130,6 +169,15 @@ const leaves = {
       status: 'approved',
       reason: 'Utility work at home'
     }
+    ,
+    {
+      id: 'L-2025-010',
+      type: 'vacation',
+      startDate: '2025-12-19',
+      endDate: '2025-12-22',
+      status: 'pending',
+      reason: 'Year-end break'
+    }
   ],
 
   "wajhi@hazentech.com": [
@@ -140,6 +188,14 @@ const leaves = {
       endDate: '2025-10-06',
       status: 'approved',
       reason: 'Flu'
+    },
+    {
+      id: 'L-2025-011',
+      type: 'casual',
+      startDate: '2025-12-14',
+      endDate: '2025-12-15',
+      status: 'pending',
+      reason: 'Family event'
     }
   ],
 
@@ -159,6 +215,14 @@ const leaves = {
       endDate: '2025-10-02',
       status: 'approved',
       reason: 'Recurring migraine'
+    },
+    {
+      id: 'L-2025-012',
+      type: 'vacation',
+      startDate: '2025-12-20',
+      endDate: '2025-12-22',
+      status: 'pending',
+      reason: 'Travel'
     }
   ],
 
@@ -170,6 +234,14 @@ const leaves = {
       endDate: '2025-12-05',
       status: 'approved',
       reason: 'Annual leave'
+    },
+    {
+      id: 'L-2025-013',
+      type: 'sick',
+      startDate: '2025-12-16',
+      endDate: '2025-12-16',
+      status: 'pending',
+      reason: 'Flu'
     }
   ],
 
@@ -181,10 +253,35 @@ const leaves = {
       endDate: '2025-11-11',
       status: 'approved',
       reason: 'Automation workshop'
+    },
+    {
+      id: 'L-2025-014',
+      type: 'vacation',
+      startDate: '2025-12-21',
+      endDate: '2025-12-22',
+      status: 'pending',
+      reason: 'Short trip'
     }
   ],
 
-  "ali.raza@hazentech.com": []
+  "ali.raza@hazentech.com": [
+    {
+      id: 'L-2025-015',
+      type: 'on-call',
+      startDate: '2025-12-06',
+      endDate: '2025-12-06',
+      status: 'approved',
+      reason: 'Planned rotation'
+    },
+    {
+      id: 'L-2025-016',
+      type: 'vacation',
+      startDate: '2025-12-19',
+      endDate: '2025-12-22',
+      status: 'pending',
+      reason: 'Family visit'
+    }
+  ]
 };
 
 const sendJson = (res, statusCode, payload) => {
