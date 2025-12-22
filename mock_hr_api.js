@@ -9,36 +9,36 @@ const users = [
     name: 'Salah',
     email: 'salah.baig@hazentech.com',
     department: 'Engineering',
-    title: 'Senior Software Engineer',
+    title: 'Head of Department',
     location: 'Lahore'
   },
   {
     id: 'a36e6db9-b134-4b69-a6c8-abd59d0cc9bc',
     name: 'Wajhi',
     email: 'wajhi@hazentech.com',
-    department: 'People Operations',
-    title: 'HR Business Partner',
-    location: 'Karachi'
+    department: '',
+    title: 'Director',
+    location: 'USA'
   },
   {
     id: '91f941cc-5edd-4f08-a014-7a7139dbd214',
     name: 'Muhammad Talha',
     email: 'm.talha@hazentech.com',
-    department: 'Finance',
-    title: 'Payroll Specialist',
-    location: 'Islamabad'
+    department: 'Software Development',
+    title: 'Software Engineer',
+    location: 'Lahore'
   },
   {
     id: '453a3e6c-c2b6-4c17-9845-ef1533033a75',
     name: 'Bazla ',
     email: 'bazla.rashid@hazentech.com',
-    department: 'People Operations',
-    title: 'HR Operations Lead',
+    department: 'Software Developer',
+    title: 'AI Engineer',
     location: 'Lahore'
   },
   {
     id: 'u105',
-    name: 'Bilal Ahmed',
+    name: 'Iqra',
     email: 'bilal.ahmed@hazentech.com',
     department: 'Quality Assurance',
     title: 'QA Engineer',
